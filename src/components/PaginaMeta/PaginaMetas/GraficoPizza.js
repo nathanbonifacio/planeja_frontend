@@ -16,14 +16,14 @@ const StyledGraph = styled(ReactApexChart)`
   }
 `;
 
-const Grafico = () => {
-  const [chartState, setChartState] = useState({
+const GraficoPizza = () => {
+  const [chartState] = useState({
     series: [1200, 20000],
     options: {
       chart: {
         width: 380,
         type: 'pie',
-      },
+      },  
       labels: ['Acumulado', 'Total'],
       plotOptions: {
         pie: {
@@ -66,4 +66,4 @@ const Grafico = () => {
   );
 };
 
-export default Grafico;
+export default GraficoPizza;

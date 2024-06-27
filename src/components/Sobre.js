@@ -18,8 +18,8 @@ function Sobre() {
                 <h2>Alcance seus objetivos!</h2>
                 <div className="subtitle">Saiba mais sobre o App</div>
                 </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit dicta veritatis sint quidem asperiores magni eaque praesentium temporibus, magnam, eveniet consequatur possimus nihil? Nemo deserunt repudiandae soluta neque doloribus, quo!</p>
-                    <Link to='/metas' class="btn btn-success">Saiba Mais.</Link>
+                    <p>Nosso aplicativo foi projetado para ajudar você a alcançar seus objetivos financeiros de maneira eficaz. Ao monitorar suas finanças, você pode identificar oportunidades de economia, otimizar seus gastos e aumentar suas economias. Com dados claros e gráficos precisos, você terá o poder de tomar decisões informadas que o aproximam cada vez mais das suas metas financeiras. Deixe-nos guiar você pelo caminho para o sucesso financeiro, tornando seus sonhos uma realidade.</p>
+                    {/* <Link to='/metas' class="btn btn-success">Saiba Mais.</Link> */}
                 </Col>
                 </Row>
             </Container>

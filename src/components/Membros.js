@@ -12,9 +12,9 @@ const teamsData = [
     fbLink: 'https://www.facebook.com',
     twitterLink: 'https://www.twitter.com',
     linkedinLink: 'https://www.linkedin.com',
-    name: 'Alecsandro S.',
+    name: 'Alecsandro',
     designation: 'Full-Stack',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
+    description: 'Cursando o 4º semestre de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia (Fatec) de Guaratinguetá.'
   },
   {
     id: 2,
@@ -22,9 +22,9 @@ const teamsData = [
     fbLink: 'https://www.facebook.com',
     twitterLink: 'https://www.twitter.com',
     linkedinLink: 'https://www.linkedin.com',
-    name: 'Marcio R.',
+    name: 'Marcio',
     designation: 'Manager',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
+    description: 'Cursando o 4º semestre de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia (Fatec) de Guaratinguetá.'
   },
   {
     id: 3,
@@ -32,9 +32,9 @@ const teamsData = [
     fbLink: 'https://www.facebook.com',
     twitterLink: 'https://www.twitter.com',
     linkedinLink: 'https://www.linkedin.com',
-    name: 'Nathan B.',
+    name: 'Nathan',
     designation: 'Backend',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
+    description: 'Cursando o 4º semestre de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia (Fatec) de Guaratinguetá.'
   },
   {
     id: 4,
@@ -42,9 +42,9 @@ const teamsData = [
     fbLink: 'https://www.facebook.com',
     twitterLink: 'https://www.twitter.com',
     linkedinLink: 'https://www.linkedin.com',
-    name: 'Mateus N.',
+    name: 'Matheus',
     designation: 'Frontend',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui facilis, totam maiores.'
+    description: 'Cursando o 4º semestre de Análise e Desenvolvimento de Sistemas na Faculdade de Tecnologia (Fatec) de Guaratinguetá.'
   }
 ]
 

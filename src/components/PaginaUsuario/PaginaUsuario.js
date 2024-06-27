@@ -18,7 +18,7 @@ import avatar8 from './img/avatar8.jpeg';
 import Grafico from '../PaginaFinanceiro/Grafico/Grafico';
 
 const Body = styled.div`
-  background-color: #101a11;
+  background-color: #E9F8F9;
   color: white;
 `;
 
@@ -195,46 +195,46 @@ const PaginaUsuario = () => {
     setTransactionsList(newArrayTransactions);
     localStorage.setItem("transactions", JSON.stringify(newArrayTransactions));
 
-    const financialData = {
-      userId,
-      description,
-      income: transaction.expense ? 0 : Number(transaction.amount),
-      expenses: transaction.expense ? Number(transaction.amount) : 0,
-      total: netTotal
-    };
+    // const financialData = {
+    //   userId,
+    //   description,
+    //   income: transaction.expense ? 0 : Number(transaction.amount),
+    //   expenses: transaction.expense ? Number(transaction.amount) : 0,
+    //   total: netTotal
+    // };
   
-    try {
-      const response = await fetch('http://localhost:3000/financial-controll', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(financialData),
-      });
-      console.log({'FINANCIAL CONTROLL RESPONSE: ': response})
+    // try {
+    //   const response = await fetch('http://localhost:3000/financial-controll', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //     },
+    //     body: JSON.stringify(financialData),
+    //   });
   
-      if (response.ok) {
-        const result = await response.json();
-        console.log({'FINANCIAL CONTROLL RESULT: ': result})
+    //   if (response.ok) {
+    //     const result = await response.json();
+    //     // const financialId = result.id;
+    //     // localStorage.setItem('financialId', financialId);
   
-        setDescription('');
-        setIncome('');
-        setExpense('');
-        setTotal('');
+    //     setDescription('');
+    //     setIncome('');
+    //     setExpense('');
+    //     setTotal('');
   
-        console.log('Dados financeiros salvos com sucesso');
-      } else {
-        console.error('Erro ao salvar dados financeiros', await response.text());
-      }
-    } catch (error) {
-      console.error('Erro ao salvar dados financeiros', error);
-    }
+    //     console.log('Dados financeiros salvos com sucesso');
+    //   } else {
+    //     console.error('Erro ao salvar dados financeiros', await response.text());
+    //   }
+    // } catch (error) {
+    //   console.error('Erro ao salvar dados financeiros', error);
+    // }
 
   };
 
   return (
     <Body>
-      <div className="container bg">
+      <div className="bg">
         <header className="header bg_header">
           <button className="menu_button" onClick={menuClick}>☰</button>
           <div className="user_name">{name}</div>

@@ -3,7 +3,6 @@
 
 /* src/App.css */
 
-
 .bg {
   position: relative;
   width: 100%;
@@ -12,7 +11,7 @@
 }
 
 .bg_header {
-  background-color: hsla(129, 20%, 7%, 0.9);
+  background-color: #003c42cc;
 }
 
 .header {
@@ -20,7 +19,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(14, 21, 15, 0.9);
+  background-color: #003c42cc;
   z-index: 1000;
   display: grid;
   grid-template-columns: auto 1fr auto auto;
@@ -36,7 +35,7 @@
   margin-left: 12px;
   grid-row: 1/span 4;
   cursor: pointer;
-  background-color: #0e150f;
+  background-color: #0e150f00;
   color: white;
   border: none;
   font-size: 25px;
@@ -72,6 +71,9 @@
   border-radius: 10px;
 }
 
+.sair{
+  text-decoration: none;
+}
 
 .user_name {
   grid-area: user_name;
@@ -90,8 +92,6 @@
   width: 100px;
   margin-right: 80px;
 }
-
-
 
 .main {
   display: grid;
@@ -163,8 +163,7 @@
 
 .bg_picker {
   display: flex;
-  background-color: rgba(41, 55, 44);
-  opacity: 0.7;
+  background-color: hsla(186, 100%, 13%, 0.7);
   flex-wrap: wrap;
   gap: 5px;
   padding: 10px;
@@ -186,7 +185,7 @@
 }
 
 .image_picker img:hover {
-  border: 2px solid #209e3b;
+  border: 2px solid #26c448;
 }
 
 /* Ajustes para as imagens dos avatares */
@@ -200,7 +199,7 @@
   justify-content: center;
   align-items: start;
   font-family: 'Noto Sans', sans-serif;
-  /* background-color: rgb(41, 55, 44); */
+  color: #111111;
 }
 
 .info p {
@@ -217,7 +216,7 @@
   border: none;
   margin-left: 10px;
   padding: 5px 0px 5px 10px;
-  background-color: #353d37e6;
+  background-color: hsla(186, 100%, 13%, 0.9);
   color: white;
   border-radius: 10px;
 }
@@ -227,7 +226,7 @@
   border: none;
   margin-left: 10px;
   padding: 5px 0px 5px 10px;
-  background-color: rgba(53, 61, 55, 0.9);
+  background-color: hsla(186, 100%, 13%, 0.9);
   color: white;
   border-radius: 10px;
 }
@@ -237,23 +236,24 @@
   width: 70px;
   border: none;
   padding: 5px 0px 5px 0px;
-  background-color: rgba(53, 61, 55, 0.9);
+  background-color: hsla(186, 100%, 13%, 0.9);
   color: white;
   border-radius: 10px;
   cursor: pointer;
 }
 
 .save:hover {
-  background-color: #209e3b;
+  background-color: #26c448;
   color: #000000;
 }
 
+/* Controle financeiro */
 .financial_control {
   grid-area: financial-control;
   border-radius: 15px;
   text-align: center;
   margin: 0px 20px;
-  background-color: #209e3b;
+  background-color: #26c448;
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 600;
@@ -288,17 +288,15 @@
   border-radius: 15px;
   padding: 10px;
   padding-top: 0;
-  width: auto;
+  width: 100%;
   margin-right: 20px;
-  background-color: rgba(41, 55, 44, 0.7);
+  background-color: teal;
   text-transform: uppercase;
 }
 
 .graph_title h2 {
-  margin: 0;
-  margin-bottom: 10px;
-  font-size: 22px;
-  /* font-weight: 600; */
+  margin: 15px 0px 5px 0px;
+  font-size: 20px;
 }
 
 .graph {
@@ -312,6 +310,7 @@
 /* formulario do lado do grafico*/
 
 .form {
+  width: 100%;
   grid-area: form;
   border-radius: 15px;
   display: flex;
@@ -319,7 +318,6 @@
   justify-content: center;
   height: 300px;
   margin-left: 20px;
-  /* background-color: rgba(41, 55, 44, 0.7); */
   text-transform: uppercase;
 }
 
@@ -345,12 +343,14 @@
   justify-content: center;
   justify-content: center;
   cursor: pointer;
-  background-color: rgb(32, 158, 59);
+  background-color: #26c448;
   font-family: 'Manrope', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   transition-duration: 0.5s;
   margin-bottom: 30px;
+  text-decoration: none;
+  color: #101a11;
 }
 
 

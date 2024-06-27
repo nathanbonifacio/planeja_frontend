@@ -71,3 +71,11 @@
         visibility: visible;
     }
 }
+
+@media (max-width: 560px){
+    .navbar{
+        margin: 0px;
+        border-radius: 0px;
+    }
+    
+}

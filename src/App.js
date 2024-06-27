@@ -8,7 +8,7 @@ import Cadastro from './components/Cadastro'
 
 
 import { AppProvider } from './context/AppContext';
-import PaginaMetas from './components/PaginaMetas/PaginaMetas/PaginaMetas';
+import PaginaMetas from './components/PaginaMeta/PaginaMetas/PaginaMetas';
 import PaginaUsuario from './components/PaginaUsuario/PaginaUsuario';
 import Financeiro from './components/Financeiro';
 import PaginaCadastroMetas from './components/PaginaCadastroMetas/PaginaCadastroMetas/CadastroMetas';

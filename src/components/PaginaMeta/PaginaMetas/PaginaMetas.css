@@ -23,7 +23,7 @@
 /**********************************/
 
 [data-theme="light"] {
-	--clr-background:#E3FEF7;
+	--clr-background:hsla(129, 20%, 7%, 0.9);
 	--clr-font:#111111;
     --clr-card:#E9F8F9;
     --clr-switch-track:#AABBCC;
@@ -91,8 +91,22 @@ transition: var(--transition);
 /**********************************/
 /* 2. Navbar
 /**********************************/
+
+.back-arrow{
+    text-decoration: none;
+    color: white;
+    margin-left: 10px;
+}
+
+.back-arrow svg {
+    width: 26px; 
+    height: 26px; 
+    color: white;
+  }
+  
+
 .navbarMeta{
-    background-color: var(--clr-card);
+    background-color: hsla(186, 100%, 13%, 0.9);
     transition: var(--transition);
     min-height: 4.5rem;
     padding: 1.6rem;
@@ -107,6 +121,7 @@ transition: var(--transition);
     justify-content: center;
     font-size: 3.2rem;
     transition: var(--transition);
+    color: white;
 }
 
 .switch{

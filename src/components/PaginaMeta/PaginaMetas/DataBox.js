@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Grafico from './grafico';
+import GraficoPizza from './GraficoPizza';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import GraficoLine from './GraficoLine';
@@ -67,7 +67,7 @@ const DataBox = ({ header, statusDataBox }) => {
             <Section style={{ display: 'flex', justifyContent: 'center' }}>
               <div>
                 <h1 style={{display:'flex', justifyContent:'center'}}>{graphMeta[0].nome}</h1>
-                <Grafico  />
+                <GraficoPizza  />
               </div>
             </Section>
           </StyledCol>

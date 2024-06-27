@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components'
 import NavBar from './NavBar'
 import StateSelect from './StateSelect';
@@ -32,8 +32,31 @@ const Container = styled.div`
 
 
 function PaginaMetas(){
+    // const financialId = localStorage.setItem('financialId');
 
+    const [totalValue, setTotalValue] = useState("");
+    const [accumulatedValue, setAccumulatedValue] = useState("");
+    const [depositedValue, setDepositedValue] = useState("");
+    const [monthlyEstimatedValue, setMonthlyEstimatedValue] = useState("");
 
+    useEffect(() => {
+        fetchData(); // Chamada inicial para buscar os dados
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const response = await fetch('sua_url_da_api_aqui');
+            const data = await response.json();
+
+            // Atualiza os estados com os valores retornados da API
+            setTotalValue(data.valorTotal);
+            setAccumulatedValue(data.valorAcumulado);
+            setDepositedValue(data.valorDepositado);
+            setMonthlyEstimatedValue(data.valorMensalEstipulado);
+        } catch (error) {
+            console.error('Erro ao buscar dados da API:', error);
+        }
+    };
     
     return(
         <HTML>

@@ -88,9 +88,6 @@ const Login = () => {
 
           </form>
         </div>
-        {Array.from({ length: 50 }, (_, i) => (
-          <span key={i} style={{ '--i': i }}></span>
-        ))}
       </div>
       <ToastContainer autoClose={3000} position='bottom-left'/>
     </div>

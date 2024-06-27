@@ -5,22 +5,22 @@ var heroData = [
   {
     id: 1,
     image: require ('../images/img-fundo.jpg'),
-    title: 'Venha fazer parte disso!!',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, excepturi necessitatibus. Cupiditate, amet! Dicta libero modi odio non, omnis aperiam saepe quibusdam nostrum, qui aliquam a natus est recusandae culpa!',
-    link: 'https://www.google.com'
+    title: 'Organização Financeira',
+    /*description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, excepturi necessitatibus. Cupiditate, amet! Dicta libero modi odio non, omnis aperiam saepe quibusdam nostrum, qui aliquam a natus est recusandae culpa!',*/
+    link: '/usuario'
   },
   {
     id: 2,
     image: require ('../images/img-fundo2.jpg'),
-    title: 'Venha fazer parte disso!!',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, excepturi necessitatibus. Cupiditate, amet! Dicta libero modi odio non, omnis aperiam saepe quibusdam nostrum, qui aliquam a natus est recusandae culpa!',
+    title: 'Design Simplificado',
+   /* description: 'Nosso site foi cuidadosamente desenvolvido para ser intuitivo e acessível a todos. Com uma interface amigável e design simplificado, facilitamos o acesso a todas as funcionalidades essenciais para o controle financeiro e o gerenciamento de metas!',*/
     link: 'https://www.google.com'
   },
   {
     id: 3,
     image: require ('../images/img-fundo3.jpg'),
-    title: 'Venha fazer parte disso!!',
-    description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, excepturi necessitatibus. Cupiditate, amet! Dicta libero modi odio non, omnis aperiam saepe quibusdam nostrum, qui aliquam a natus est recusandae culpa!',
+    title: 'Tenha Controle de Suas Metas',
+    /*description: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. A, excepturi necessitatibus. Cupiditate, amet! Dicta libero modi odio non, omnis aperiam saepe quibusdam nostrum, qui aliquam a natus est recusandae culpa!',*/
     link: 'https://www.google.com'
   }
 ]
@@ -43,7 +43,6 @@ function UncontrolledExample() {
                 <p>
                   {hero.description}
                 </p>
-                <a className='btn btn-success' href={hero.link}>Saiba Mais</a>
               </Carousel.Caption>
             </Carousel.Item>
           )

@@ -13,12 +13,16 @@ const Body = styled.div`
   color: white;
   width:100%;
   height: 100vh;
-  
+ 
+  @media (max-width: 650px){
+    padding: 0px 0px 200px 0px;
+  }
+
 `;
 const Container = styled.div`
     width: 80%;
     height: auto;
-    margin: 80px 0px 0px 120px;
+    padding: 100px 0px 0px 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -26,9 +30,10 @@ const Container = styled.div`
 
 const Formulario = styled.div`
     width: 800px;
-    height: 500px;
+    height: auto;
     background-color: #E3FEF7;
     border-radius: 10px;
+    
 `;
 
 const Titulo = styled.div`
@@ -138,7 +143,7 @@ function CadastroMetas () {
                     <li>Sair</li>
                     </ul>
                 </div>
-                )};
+                )}
             </div>
             <Container>
                 <Formulario>
@@ -214,7 +219,7 @@ function CadastroMetas () {
                               />
                             </Col>
                           </Row>
-                            <Col className='mt-5' style={{display: 'flex', justifyContent: 'end', alignItems: 'end', width:'100%'}}>
+                            <Col className='mt-5 mb-3' style={{display: 'flex', justifyContent: 'end', alignItems: 'end', width:'100%'}}>
                                 <Botao onClick={handleSubmit}>Cadastrar</Botao>
                                 <Link to="/usuario" style={{textDecoration:'none'}}><Botao style={{textAlign: 'center', marginLeft:'12px'}}>Inicio</Botao></Link>
                             </Col>

@@ -8,19 +8,19 @@ const servicesData = [
       id: 1,
       icon: 'fa-solid fa-chart-line',
       title: 'Cadastro de Metas',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, voluptates laboriosam laudantium provident sequi illum cupiditate beatae nam reiciendis velit magnam quos praesentium voluptate, consectetur totam at eligendi iure corporis.'
+      description: 'Com nosso aplicativo, você pode cadastrar suas metas e acompanhar seu progresso de maneira simples e eficiente. Estabeleça objetivos claros, como economizar para uma viagem dos sonhos e nós o ajudaremos a monitorar cada passo do caminho. Transforme planos em realidade com o poder de um controle financeiro inteligente ao seu alcance.'
     },
     {
       id: 2,
       icon: 'fa-solid fa-arrows-to-circle',
-      title: 'Intuitivo',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, voluptates laboriosam laudantium provident sequi illum cupiditate beatae nam reiciendis velit magnam quos praesentium voluptate, consectetur totam at eligendi iure corporis.'
+      title: 'Controle Financeiro',
+      description: 'Facilite seu controle financeiro conosco. Nosso sistema intuitivo permite cadastrar suas receitas e despesas de maneira simples, sem a necessidade de subdivisões complexas. Assim, você pode gerenciar suas finanças com eficiência, mantendo o equilíbrio financeiro e focando no que realmente importa para alcançar seus objetivos.'
     },
     {
       id: 3,
       icon: 'fa-solid fa-users',
-      title: 'Criativo',
-      description: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores, voluptates laboriosam laudantium provident sequi illum cupiditate beatae nam reiciendis velit magnam quos praesentium voluptate, consectetur totam at eligendi iure corporis.'
+      title: 'Intuitivo',
+      description: 'Nosso site foi cuidadosamente desenvolvido para ser intuitivo e acessível a todos. Com uma interface amigável e design simplificado, facilitamos o acesso a todas as funcionalidades essenciais para o controle financeiro e o gerenciamento de metas, sendo assim a melhor escolha para o seu controle pessoal!'
     }
 ]
 
