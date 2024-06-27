@@ -18,6 +18,8 @@ function SelectBasicExample() {
   const [monthlyValue, setMonthlyValue] = useState('');
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
+  const [value1, setValue1] = useState('');
+  const [value2, setValue2] = useState('');
 
   const handleSelectChange1 = async (event) => {
     const value = event.target.value;
@@ -123,17 +125,42 @@ function SelectBasicExample() {
     }
   };
 
+  const handleInputChange1 = (event) => {
+    const value = event.target.value;
+    if (inputType1 === 'number' && value < 0) {
+      setValue1(0);
+    } else {
+      setValue1(value);
+    }
+  };
+
+  const handleInputChange2 = (event) => {
+    const value = event.target.value;
+    if (inputType2 === 'number' && value < 0) {
+      setValue2(0);
+    } else {
+      setValue2(value);
+    }
+  };
+
   return (
     <Container className='mt-4'>
       <Row>
         <Col>
-          <Form.Control type={inputType1} placeholder="Digite Aqui"/>
+        <Form.Control 
+            type={inputType1} 
+            placeholder="Digite Aqui" 
+            value={value1} 
+            onChange={handleInputChange1} 
+          />
         </Col>
         <Col>
-          <Form.Select aria-label="Default select example" onChange={handleSelectChange1} value={selectedOption1}>
-            <option value="">Selecione para cadastrar</option>
-            {renderOptions(selectedOption2)}
-          </Form.Select>
+        <Form.Control 
+            type={inputType2} 
+            placeholder="Digite Aqui" 
+            value={value2} 
+            onChange={handleInputChange2} 
+          />
         </Col>
       </Row>
       <Row className='mt-4'>

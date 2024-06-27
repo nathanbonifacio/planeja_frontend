@@ -4,12 +4,14 @@ import { Link } from 'react-router-dom';
 import {toast, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './LoginRegister.css';
+import Tooltip from '../components/Tooltip';
 
 const Cadastro = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [showTooltip, setShowTooltip] = useState(false);
 
   const handleRegister = async (e) => {
     e.preventDefault();
@@ -50,6 +52,18 @@ const Cadastro = () => {
     }
   };
 
+  const passwordRequirements = (
+    <div>
+      <p>A senha deve conter:</p>
+      <ul>
+        <li>8 caracteres</li>
+        <li>1 caracter especial</li>
+        <li>1 número</li>
+        <li>1 letra maiúscula</li>
+      </ul>
+    </div>
+  );
+
   return (
     <div className="login-body">
       <div className="box">
@@ -79,9 +93,12 @@ const Cadastro = () => {
                 type="password"
                 placeholder="Senha"
                 value={password}
+                onFocus={() => setShowTooltip(true)}
+                onBlur={() => setShowTooltip(false)}
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
+              <Tooltip message={passwordRequirements} show={showTooltip} />
             </div>
             <div className="input-box">
               <input
