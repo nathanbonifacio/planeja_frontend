@@ -1,0 +1,11 @@
+.about-block {
+    text-transform: uppercase;
+    margin: 0 0 5px;
+    font-size: 16px;
+  }
+  
+  .about-block {
+    background-color: #f64b4b;
+    -webkit-transition: width 0.3s linear;
+    transition: width 0.3s linear;
+  }

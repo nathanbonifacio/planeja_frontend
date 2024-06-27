@@ -1,38 +1,91 @@
-.App {
-  text-align: center;
+:root{
+    --clr-background:#E3FEF7;
+	--clr-font:#111111;
+    --clr-card:#E9F8F9;
+    --clr-switch-track:#135D66;
+    --clr-link:#003C43;
+
+    --transition: all 0.3s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    color: #333;
+    background: #fff;
+    font: 16px/1.6 "Muli", sans-serif;
+    min-width: 320px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
   }
+
+.w-100{
+    height: 100vh;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.buttons{
+    background-color: var(--clr-link);
+    color: var(--clr-card);
+    font-size: 14px;
+    padding: 8px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--transition);
 }
 
-.App-link {
-  color: #61dafb;
+.buttons:hover{
+    background-color: var(--clr-switch-track);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.block {
+    padding: 70px 0;
+    border-bottom: 1px solid #e6e6e6;
   }
-  to {
-    transform: rotate(360deg);
+
+  .container-fluid {
+    margin: 0 auto;
+    max-width: 1200px;
   }
-}
+
+  .title-holder {
+    text-align: center;
+    margin: 0 0 40px;
+  }
+  
+  .title-holder h2 {
+    margin: 0 0 5px;
+    text-transform: uppercase;
+  }
+  
+  .title-holder .subtitle {
+    color: #999999;
+  }
+  
+  .title-holder .subtitle:before {
+    content: '-';
+    margin: 0 5px 0 0;
+  }
+  
+  .title-holder .subtitle:after {
+    content: '-';
+    margin: 0 0 0 5px;
+  }
+
+  .services-block .icon {
+    width: 100%;
+    height: 60px;
+    font-size: 60px;
+    display: inline-block;
+    text-align: center;
+  }
+
+  .services-block .card-title{
+    width: 100%;
+    height: 60px;
+    font-size: 22px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  

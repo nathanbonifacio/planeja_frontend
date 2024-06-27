@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* src/App.css */
+
+
+.bg {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+}
+
+.bg_header {
+  background-color: hsla(129, 20%, 7%, 0.9);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(14, 21, 15, 0.9);
+  z-index: 1000;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas: "menu_button user_name app_name app_name";
+  align-items: center;
+  padding: 20px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.menu_button {
+  grid-area: menu_button;
+  margin-left: 12px;
+  grid-row: 1/span 4;
+  cursor: pointer;
+  background-color: #0e150f;
+  color: white;
+  border: none;
+  font-size: 25px;
+}
+
+.menu {
+  position: fixed;
+  top: 60px;
+  left: 20px;
+  background-color: #0e150f;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  z-index: 1001;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  padding: 10px;
+  cursor: pointer;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.menu ul li:hover {
+  background-color: #209e3b;
+  color: #101a11;
+  border-radius: 10px;
+}
+
+
+.user_name {
+  grid-area: user_name;
+  grid-row: 1/span 4;
+  margin-left: 40px;
+  font-size: 21px;
+  text-transform: capitalize;
+}
+
+.app_name {
+  grid-area: app_name;
+  grid-row: 1/span 4;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 21px;
+  width: 100px;
+  margin-right: 80px;
+}
+
+
+
+.main {
+  display: grid;
+  grid-template-areas:
+    "photo photo info info info "
+    "image_picker image_picker image_picker image_picker image_picker"
+    "financial-control  financial-control financial-control financial-control financial-control"
+    "form form DataVisual DataVisual  DataVisual";
+  gap: 30px;
+  padding: 10px;
+  padding-top: 100px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.photo {
+  display: flex;
+  grid-column: 1/span 2;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo_container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+
+.photo_container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.353);
+  box-sizing: border-box;
+}
+
+/* Fazer o icone de camera sobrepor a imagem */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #101a11;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease;
+  border-radius: 15px;
+}
+
+.photo_container:hover .overlay {
+  opacity: 0.80;
+}
+
+.overlay img.camera-icon {
+  width: 50px;
+  height: 50px;
+  opacity: 1;
+}
+
+/* Escolha da imagem */
+
+.image_picker {
+  grid-area: image_picker;
+  display: flex;
+}
+
+.bg_picker {
+  display: flex;
+  background-color: rgba(41, 55, 44);
+  opacity: 0.7;
+  flex-wrap: wrap;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 15px;
+  margin: 0px 20px;
+  width: auto;
+  height: auto;
+}
+
+.bg_picker img {
+  box-sizing: border-box;
+  margin: 5px 7px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: margin-bottom 0.3s ease;
+  opacity: 1;
+}
+
+.image_picker img:hover {
+  border: 2px solid #209e3b;
+}
+
+/* Ajustes para as imagens dos avatares */
+.info {
+  grid-area: info;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  font-family: 'Noto Sans', sans-serif;
+  /* background-color: rgb(41, 55, 44); */
+}
+
+.info p {
+  margin-left: 10px;
+}
+
+/* editar usuário */
+.edit_info {
+  cursor: pointer;
+}
+
+.nome {
+  width: 200px;
+  border: none;
+  margin-left: 10px;
+  padding: 5px 0px 5px 10px;
+  background-color: #353d37e6;
+  color: white;
+  border-radius: 10px;
+}
+
+.mail {
+  width: 200px;
+  border: none;
+  margin-left: 10px;
+  padding: 5px 0px 5px 10px;
+  background-color: rgba(53, 61, 55, 0.9);
+  color: white;
+  border-radius: 10px;
+}
+
+.save {
+  margin-left: 10px;
+  width: 70px;
+  border: none;
+  padding: 5px 0px 5px 0px;
+  background-color: rgba(53, 61, 55, 0.9);
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.save:hover {
+  background-color: #209e3b;
+  color: #000000;
+}
+
+.financial_control {
+  grid-area: financial-control;
+  border-radius: 15px;
+  text-align: center;
+  margin: 0px 20px;
+  background-color: #209e3b;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: rgb(16, 26, 17);
+  transition: height 5s ease-in-out;
+}
+
+.financial_control.expanded {
+  height: auto;
+
+}
+
+.financial_control_title {
+  cursor: pointer;
+  width: 100%;
+  padding: 10px;
+}
+
+.financial_control_space {
+  transition: height 5s ease;
+  padding: 0px 10px 10px;
+}
+
+/*  */
+.DataVisual {
+  grid-area: DataVisual;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 15px;
+  padding: 10px;
+  padding-top: 0;
+  width: auto;
+  margin-right: 20px;
+  background-color: rgba(41, 55, 44, 0.7);
+  text-transform: uppercase;
+}
+
+.graph_title h2 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 22px;
+  /* font-weight: 600; */
+}
+
+.graph {
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* formulario do lado do grafico*/
+
+.form {
+  grid-area: form;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 300px;
+  margin-left: 20px;
+  /* background-color: rgba(41, 55, 44, 0.7); */
+  text-transform: uppercase;
+}
+
+.links {
+  grid-area: links;
+}
+
+.links .espaco {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.create_goals,
+.goal_control {
+  grid-area: create-goals;
+  width: 90%;
+  border: none;
+  padding: 10px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: rgb(32, 158, 59);
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition-duration: 0.5s;
+  margin-bottom: 30px;
+}
+
+
+
+.create_goals:hover,
+.goal_control:hover {
+  background-color: rgb(74, 204, 102);
+}
+
+.bg_footer {
+  background-color: rgba(14, 21, 15, 0.9);
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  border: none;
+}
+
+@media (max-width: 850px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .financial_control,
+  .form,
+  .DataVisual {
+    width: auto;
+    margin: 0px 20px 0px 20px;
+  }
+
+  .DataVisual {
+    padding-top: 10px;
+  }
+
+  .form {
+    margin-top: -40px;
+  }
+
+  .create_goals,
+  .goal_control {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image_picker {
+    padding: 15px 0px;
+    gap: 10px;
+    row-gap: 20px;
+  }
+
+  .info {
+    width: auto;
+    margin: 0;
+  }
+
+
+}
+
+@media (max-width: 660px) {
+
+  .user_name {
+    display: none;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "menu_button app_name app_name";
+  }
+
+  .app_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 430px) {
+  .header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "menu_button app_name app_name";
+  }
+
+  .app_name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 375px) {
+
+  .bg_picker {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .bg_picker img {
+    margin-bottom: 10px;
+  }
+
+}

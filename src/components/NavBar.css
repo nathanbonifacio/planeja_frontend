@@ -1,0 +1,73 @@
+:root{
+    --clr-background:#E3FEF7;
+	--clr-font:#111111;
+    --clr-card:#E9F8F9;
+    --clr-switch-track:#135D66;
+    --clr-link:#003C43;
+
+    --transition: all 0.3s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+.navbar{
+    background-color: var(--clr-background)  !important;
+    height: 80px;
+    margin: 20px;
+    border-radius: 16px;
+    padding: 0.5rem;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    transition: all 0.5s linear;
+}
+
+.navbar-brand{
+    color: var(--clr-link);
+    font-weight: 500;
+    font-size: 24px;
+    transition: var(--transition) color;
+}
+
+.navbar-toggler{
+    border: none;
+    font-size: 1.3rem;
+}
+
+.navbar-toggler:focus, .btn-close:focus{
+    box-shadow: none;
+    outline: none;
+}
+
+.nav-link{
+    color: var(--clr-link) ;
+    font-weight: 500;
+    position: relative;
+    margin: 10px;
+    
+}
+
+.nav-item:hover, .nav-link.active{
+    color: var(--clr-font) ;
+}
+
+@media (min-width: 990px) {
+    .nav-link::before{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: var(--clr-link);
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+    
+    .nav-link:hover::before, .nav-link.active::before{
+        width: 100%;
+        visibility: visible;
+    }
+}

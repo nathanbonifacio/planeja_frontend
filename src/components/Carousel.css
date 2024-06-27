@@ -1,0 +1,37 @@
+:root{
+    --clr-background:#E3FEF7;
+	--clr-font:#111111;
+    --clr-card:#E9F8F9;
+    --clr-switch-track:#135D66;
+    --clr-link:#003C43;
+
+    --transition: all 0.3s linear;
+    --shadow-card: 5px 5px 30px 0 rgba(51, 51, 51, 20%);
+}
+
+
+.hero-block .carousel-item:before {
+    content: '';
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+  
+.hero-block .carousel-item img {
+    width: 100%;
+}
+  
+.hero-block .carousel-caption {
+    left: 25%;
+    right: 25%;
+    transform: translateY(50%);
+    -webkit-transform: translateY(50%);
+    bottom: 50%;
+}
+  
+.hero-block p {
+    margin: 0 0 30px;
+}
